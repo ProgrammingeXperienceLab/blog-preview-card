@@ -41,74 +41,77 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
       flex-direction: column;
     }
 
     .blog-card {
       background-color: hsl(0, 0%, 100%);
-      border-radius: 15px;
+      border: 1px solid hsl(0, 0%, 7%);
+      border-radius: 20px;
       max-width: 350px;
       width: 100%;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      box-shadow: 8px 8px 0 hsl(0, 0%, 7%);
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .blog-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
     }
 
     .blog-image {
       width: 100%;
       display: block;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
     }
 
     .blog-content {
       padding: 20px;
     }
 
+    .tag {
+      display: inline-block;
+      background-color: hsl(47, 88%, 63%);
+      color: hsl(0, 0%, 7%);
+      font-weight: 800;
+      font-size: 14px;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+
+    .publish-date {
+      font-size: 14px;
+      color: hsl(0, 0%, 7%);
+      margin-bottom: 15px;
+      display: block;
+    }
+
     .blog-title {
       font-weight: 800;
-      font-size: 18px;
+      font-size: 20px;
       color: hsl(0, 0%, 7%);
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       cursor: pointer;
       transition: color 0.3s ease;
-      outline: none;
     }
 
-    /* Hover and focus states changed to yellow without underline */
-    .blog-title:hover,
-    .blog-title:focus {
-      color: hsl(47, 88%, 63%); /* Yellow */
-      text-decoration: none;
-    }
-
-    .blog-title:active {
-      color: hsl(228, 45%, 60%);
+    .blog-title:hover {
+      color: hsl(47, 88%, 63%);
     }
 
     .blog-description {
-      font-weight: 500;
       font-size: 16px;
       color: hsl(0, 0%, 42%);
-      margin-bottom: 20px;
       line-height: 1.5;
+      margin-bottom: 20px;
     }
 
     .author-info {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .author-avatar {
-      width: 40px;
-      height: 40px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
     }
 
@@ -116,13 +119,6 @@
       font-weight: 800;
       font-size: 14px;
       color: hsl(0, 0%, 7%);
-    }
-
-    .publish-date {
-      font-weight: 500;
-      font-size: 14px;
-      color: hsl(0, 0%, 42%);
-      margin-left: auto;
     }
 
     .attribution {
@@ -135,7 +131,7 @@
     .attribution a {
       color: hsl(228, 45%, 44%);
       text-decoration: none;
-      transition: color 0.3s ease, text-decoration 0.3s ease;
+      transition: color 0.3s ease;
     }
 
     .attribution a:hover,
@@ -144,19 +140,6 @@
       text-decoration: underline;
       outline: none;
     }
-
-    @media (min-width: 768px) {
-      .blog-card {
-        max-width: 500px;
-      }
-    }
-
-    @media (min-width: 1440px) {
-      body {
-        padding: 40px;
-      }
-    }
-
   </style>
 </head>
 <body>
@@ -165,22 +148,25 @@
     <img src="./assets/images/illustration-article.png" alt="Blog preview image" class="blog-image">
 
     <div class="blog-content">
-      <h2 class="blog-title" tabindex="0">
-        Shift the overall look and feel by adding these wonderful touches to furniture
-      </h2>
+      <span class="tag">Learning</span>
+      <span class="publish-date">Published 21 Dec 2023</span>
+
+      <h2 class="blog-title">HTML & CSS foundations</h2>
+
       <p class="blog-description">
-        Ever wondered how you can easily add a touch of class to your home decor? This article provides practical tips and stylish inspiration.
+        These languages are the backbone of every website, defining structure, content, and presentation.
       </p>
+
       <footer class="author-info">
         <img src="./assets/images/image-avatar.webp" alt="Author avatar" class="author-avatar">
-        <span class="author-name">Michelle Appleton</span>
-        <span class="publish-date">28 Jun 2020</span>
+        <span class="author-name">Greg Hooper</span>
       </footer>
     </div>
   </article>
 
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by PXL – Programming eXperience Lab.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by PXL – Programming eXperience Lab.
   </div>
 
 </body>
